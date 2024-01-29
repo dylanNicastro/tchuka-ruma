@@ -43,7 +43,7 @@ int printPrompt() {
         return choice;
     }
     else {
-        printf("Invalid choice.\n");
+        printf("Invalid choice. ");
         return printPrompt();
     }
 }
