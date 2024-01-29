@@ -9,15 +9,20 @@ int move(int starting);
 int a[] = {2, 2, 2, 2, 0};
 
 int main() {
+    int gameOver = 0;
     printGame(a);
-    int place = printPrompt();
-    int endedOn = move(place);
-    if (a[endedOn] == 0) {
-        printf("You lost because the last counter fell into section %d.\n", endedOn+1);
-        return 0;
-    }
-    else if (a[4] == 8) {
-        printf("You won!\n");
+    while (gameOver == 0) {
+        int place = printPrompt();
+        int endedOn = move(place);
+        if (a[endedOn-1] == 1 && endedOn != 5) {
+            printf("You lost because the last counter fell into section %d.\n", endedOn);
+            return 0;
+            gameOver = 1;
+        }
+        else if (a[4] == 8) {
+            printf("You won!\n");
+            gameOver = 1;
+        }
     }
     return 0;
 }
@@ -31,7 +36,7 @@ int printPrompt() {
     int choice;
     scanf("%d", &choice);
     if (a[choice-1] == 0) {
-        printf("Invalid choice.\n");
+        printf("Invalid choice. ");
         return printPrompt();
     }
     else if (choice >= 1 && choice <= 4) {
@@ -44,20 +49,26 @@ int printPrompt() {
 }
 
 int move(int starting) {
-    // convert starting to its index
-    starting--;
-    
-    int amount = a[starting];
-    a[starting] = 0;
-    starting++;
+    int amount = a[starting-1];
+    a[starting-1] = 0;
 
-    while (amount > 0) {
-        a[starting]++;
-        amount--;
-        if (starting == 4) {
-            starting = 0;
+    while (amount != 0) {
+        starting++;
+        if (starting == 6) {
+            starting = 1;
         }
-        else {starting++;}
+        a[starting-1]++;
+        amount--;
+
+    }
+    if (a[4] != 8) {
+        printGame(a);
+    }
+    if (starting != 5) {
+        if (a[starting-1] != 1) {
+            printf("Last piece landed in section %d. Continue sowing seeds!\n", starting);
+            return move(starting);
+        }
     }
     return starting;
 }
