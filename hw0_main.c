@@ -28,7 +28,7 @@ int main() {
 }
 
 void printGame(int arrToPrint[]) {
-    printf("%d_%d_%d_%d_|_%d\n", arrToPrint[0], arrToPrint[1], arrToPrint[2], arrToPrint[3], arrToPrint[4]);
+    printf("%d %d %d %d | %d\n", arrToPrint[0], arrToPrint[1], arrToPrint[2], arrToPrint[3], arrToPrint[4]);
 }
 
 int printPrompt() {
