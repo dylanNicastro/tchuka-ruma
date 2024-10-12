@@ -10,7 +10,7 @@ Get all stones into the fifth space, called Ruma, without accidentally placing t
 
 # How to Install:
 
-Download `TchukaRuma.exe` from [here](https://github.com/dylanNicastro/tchuka-ruma/releases/tag/v1.0.0)
+Download `TchukaRuma.exe` from [here](https://github.com/dylanNicastro/tchuka-ruma/releases/latest)
 > [!WARNING]
 > Since the .exe file will instantly close at the end of the game if ran independently, it's recommended to launch the game from a terminal like `Command Prompt` or `Powershell` by navigating to the directory and typing the application name, like so:
 ```
