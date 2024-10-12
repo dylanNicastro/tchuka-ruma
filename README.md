@@ -5,8 +5,8 @@ The board has five spaces to store stones, and the player picks up the stones fr
 ## Objective:
 Get all stones into the fifth space, called Ruma, without accidentally placing the last stone into an empty space.
 
-[!NOTE]
-[This website](https://www.whatdowedoallday.com/tchuka-ruma/) has a more in-depth explanation of Tchuka Ruma!
+> [!NOTE]
+> [This website](https://www.whatdowedoallday.com/tchuka-ruma/) has a more in-depth explanation of Tchuka Ruma!
 
 # How to Play:
 1) Choose a space to take the stones from by typing the number of that space (1-4)
@@ -18,8 +18,8 @@ Get all stones into the fifth space, called Ruma, without accidentally placing t
 4) Repeat until you win or lose!
 ---
 
-[!WARNING]
-Since the .exe file will instantly close at the end of the game if ran independently, it's recommended to launch the game from a terminal by navigating to the directory and typing the application name, like so:
+> [!WARNING]
+> Since the .exe file will instantly close at the end of the game if ran independently, it's recommended to launch the game from a terminal by navigating to the directory and typing the application name, like so:
 ```
 C:\Users\me\tchuka-ruma> .\TchukaRuma.exe
 ```
